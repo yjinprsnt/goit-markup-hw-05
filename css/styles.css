@@ -135,6 +135,8 @@ img {
 }
 
 .page-link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -157,6 +159,20 @@ img {
 
 .active-link {
   color: var(--accent-cl);
+}
+
+.active-link::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-cl);
 }
 /* = /link-list = */
 /* = contact-list = */
