@@ -150,14 +150,12 @@ img {
   letter-spacing: 0.02em;
 
   color: var(--secondary-txt-cl);
+
+  transition: color var(--duration) var(--timing-function);
 }
 
 .page-link:hover,
-.page-link:focus,
-.contact-mail-link:hover,
-.contact-mail-link:focus,
-.contact-tel-link:hover,
-.contact-tel-link:focus {
+.page-link:focus {
   color: var(--accent-cl);
 }
 
@@ -202,6 +200,15 @@ img {
 
   color: currentColor;
   font-weight: 500;
+
+  transition: color var(--duration) var(--timing-function);
+}
+
+.contact-mail-link:hover,
+.contact-mail-link:focus,
+.contact-tel-link:hover,
+.contact-tel-link:focus {
+  color: var(--accent-cl);
 }
 
 .contact-icon {
@@ -265,6 +272,8 @@ img {
 
   color: var(--main-bg-cl);
   background-color: var(--accent-cl);
+
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .feedback-btn:hover,
@@ -431,6 +440,9 @@ img {
 
   color: var(--icon-color);
   background-color: var(--main-bg-cl);
+
+  transition: color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function);
 }
 
 .team-social-link:hover,
@@ -472,6 +484,9 @@ img {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   color: var(--icon-color);
+
+  transition: color var(--duration) var(--timing-function),
+    border-color var(--duration) var(--timing-function);
 }
 
 .clients-item-link:hover,
@@ -523,11 +538,15 @@ img {
 
 .foot-contact-address-link {
   color: var(--main-bg-cl);
+
+  transition: color var(--duration) var(--timing-function);
 }
 
 .foot-contact-mail-link,
 .foot-contact-tel-link {
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--duration) var(--timing-function);
 }
 
 .foot-contact-address-link:hover,
@@ -571,6 +590,8 @@ img {
 
   color: var(--main-bg-cl);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .foot-social-link:hover,
@@ -623,6 +644,10 @@ img {
 
   color: var(--secondary-txt-cl);
   background-color: var(--secondary-bg-cl);
+
+  transition: color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
 }
 
 .work-filter-btn:hover,
@@ -661,6 +686,8 @@ img {
 
 .project-link {
   display: block;
+
+  transition: box-shadow var(--duration) var(--timing-function);
 }
 
 .project-link:hover,
