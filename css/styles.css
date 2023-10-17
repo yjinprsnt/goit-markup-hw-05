@@ -669,6 +669,40 @@ img {
     0px 1px 1px 0px #0000001f;
 }
 
+.project-img-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img-deck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  color: var(--main-bg-cl);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--timing-function);
+}
+
+.project-link:hover .project-img-deck,
+.project-link:focus .project-img-deck {
+  transform: translateY(0);
+}
+
 .project-item-content {
   padding-top: 20px;
   padding-right: 24px;
