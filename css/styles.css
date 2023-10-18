@@ -87,6 +87,7 @@ img {
 
 .btn {
   cursor: pointer;
+  border: none;
 }
 
 /* ====== Page header ====== */
@@ -258,7 +259,6 @@ img {
   min-width: 216px;
   min-height: 50px;
   border-radius: 4px;
-  border: none;
   padding-top: 10px;
   padding-right: 32px;
   padding-bottom: 10px;
@@ -280,6 +280,68 @@ img {
 .feedback-btn:focus {
   background-color: #188ce8;
 }
+
+/* = Modal Window = */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity var(--duration) var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 8px;
+
+  border-radius: 4px;
+
+  background-color: var(--main-bg-cl);
+
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  transition: transform var(--duration) var(--timing-function);
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--main-bg-cl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+/* = /Modal Window = */
 /* ====== /Hero section ====== */
 
 /* ====== Advantage section ====== */
@@ -618,12 +680,8 @@ img {
   margin-bottom: 50px;
 }
 
-.work-item {
+.work-item:not(:last-child) {
   margin-right: 8px;
-}
-
-.work-item:last-child {
-  margin-right: 0;
 }
 
 .work-filter-btn {
@@ -633,9 +691,7 @@ img {
   padding-right: 25px;
   padding-bottom: 6px;
   padding-left: 25px;
-
   border-radius: 4px;
-  border: none;
 
   font-size: 16px;
   font-weight: 500;
@@ -718,6 +774,8 @@ img {
   padding-bottom: 63px;
   padding-left: 24px;
 
+  opacity: 0;
+
   color: var(--main-bg-cl);
   background-color: rgba(33, 150, 243, 0.9);
 
@@ -728,6 +786,7 @@ img {
 .project-link:hover .project-img-deck,
 .project-link:focus .project-img-deck {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .project-item-content {
